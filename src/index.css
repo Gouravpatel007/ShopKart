@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #2874F0;
+  --secondary-color: #FB641B;
+  --accent-color: #388E3C;
+  --success-color: #388E3C;
+  --warning-color: #FF9F00;
+  --error-color: #FF6161;
+  --background-light: #F1F3F6;
+  --text-light: #212121;
+  --text-secondary-light: #878787;
+  --card-light: #FFFFFF;
+  --background-dark: #121212;
+  --text-dark: #FFFFFF;
+  --text-secondary-dark: #AAAAAA;
+  --card-dark: #1E1E1E;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-light {
+  background-color: var(--background-light);
+  color: var(--text-light);
+}
+
+.theme-dark {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+.card-light {
+  background-color: var(--card-light);
+  color: var(--text-light);
+}
+
+.card-dark {
+  background-color: var(--card-dark);
+  color: var(--text-dark);
+}
+
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom slider dots */
+.slick-dots li button:before {
+  font-size: 12px;
+  color: var(--primary-color);
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--primary-color);
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
